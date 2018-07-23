@@ -4,13 +4,13 @@ rm -rf production
 # activate default configs for my personal gcloud account
 gcloud config configurations activate default
 # set project to proper value
-gcloud --quiet config set project ivikramtiwari
+gcloud --quiet config set project tusharsheth
 
 # copy everything in a new production directory but exclude git directories
-rsync -d -r --exclude='production' --exclude='.git' ./* ./production
+rsync -d`````` -r --exclude='production' --exclude='.git' ./* ./production
 
 # copy production directory to google storage
-gsutil -m rsync -d -r production gs://ivikramtiwari-code/website/production
+gsutil -m rsync -d -r production gs://itusharsheth-code/website/production
 
 # remove temporary production directory
 rm -rf production
